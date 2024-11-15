@@ -1,0 +1,30 @@
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        kategori = request.form['kategori']
+        harga = 0
+        if kategori == "Pelajar SGGS":
+            harga = 12.00
+        elif kategori == "Guru SGGS":
+            harga = 14.00
+        elif kategori == "Orang Awam (Bawah 12 tahun)":
+            harga = 5.50
+        elif kategori == "Orang Awam (13 hingga 50 tahun)":
+            harga = 20.00
+        elif kategori == "Orang Awam (51 tahun dan ke atas)":
+            harga = 15.00
+        
+        # Simpan harga dalam sesi atau panggil semula harga untuk paparan
+        if 'jumlah' not in request.cookies:
+            jumlah = harga
+        else:
+            jumlah = float(request.cookies.get('jumlah')) + harga
+
+        response = app.make_response(render_template('index.html', harga=harga, jumlah=jumlah))
+        response.set_cookie('jumlah', str(jumlah))
+
+        return response
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
