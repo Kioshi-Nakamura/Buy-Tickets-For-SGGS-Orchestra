@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Body */
+body {
+    background-color: #F8EDD6;
+    color: #0F0000;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #F4B3B3;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Header */
+header h1 {
+    color: #6E1313;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Image Frame Section */
+.image-frame {
+    background-color: #002028;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#concert-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Ticket Selection */
+.ticket-selection {
+    background-color: #002028;
+    color: #F8EDD6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.ticket-selection h2 {
+    font-size: 1.8em;
+    color: #F4B3B3;
+}
+
+select, button {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+select {
+    background-color: #0F0000;
+    color: #F8EDD6;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    background-color: #6E1313;
+    color: #F8EDD6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #440000;
+}
+
+/* Ticket List */
+.ticket-list {
+    background-color: #440000;
+    color: #F8EDD6;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.ticket-list h3 {
+    font-size: 1.5em;
+}
+
+/* Total Section */
+.total {
+    background-color: #002028;
+    color: #F8EDD6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.total h3 {
+    font-size: 1.5em;
+    color: #F4B3B3;
+}
+
+#finishBtn {
+    padding: 10px 20px;
+    background-color: #0F0000;
+    color: #F8EDD6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#finishBtn:hover {
+    background-color: #440000;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #002028;
+}
