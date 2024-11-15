@@ -1,6 +1,6 @@
 let totalPrice = 0;
 
-// Define ticket prices and emojis for each category
+// Define ticket prices for each category
 const prices = {
     "pelajar sggs": 12.00,
     "guru sggs": 14.00,
@@ -9,28 +9,19 @@ const prices = {
     "orang awam 51+": 15.00
 };
 
-const symbols = {
-    "pelajar sggs": "🎓",
-    "guru sggs": "👩‍🏫",
-    "orang awam <12": "🦄",
-    "orang awam 13-50": "🎸",
-    "orang awam 51+": "🎻"
-};
-
 // Function to add a ticket
 function addTicket() {
     const category = document.getElementById('category').value;
     const ticketPrice = prices[category];
-    const ticketSymbol = symbols[category];
 
     // Add the ticket price to the total
     totalPrice += ticketPrice;
 
-    // Create ticket item and display it
+    // Create ticket item and display it with symbols
     const ticketItem = document.createElement('div');
     ticketItem.classList.add('ticket-item');
-    ticketItem.innerHTML = `💸 ${category.replace(/_/g, " ")}: RM${ticketPrice.toFixed(2)} ${ticketSymbol}`;
-    
+    ticketItem.innerHTML = `${category.replace(/_/g, " ")}: RM${ticketPrice.toFixed(2)} ✮⋆˙`;
+
     document.getElementById('tickets-list').appendChild(ticketItem);
 
     // Update total price displayed
@@ -47,7 +38,7 @@ function finishPurchase() {
     if (totalPrice === 0) {
         alert("Please add tickets first!");
     } else {
-        alert(`Purchase complete! Total amount: RM${totalPrice.toFixed(2)}`);
+        alert(`Purchase complete! Total amount: RM${totalPrice.toFixed(2)} 𓏲`);
         resetForm();
     }
 }
