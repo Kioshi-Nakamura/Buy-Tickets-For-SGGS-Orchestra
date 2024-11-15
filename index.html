@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGGS Orchestra Ticket System</title>
+    <!-- Importing Playfair Display font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎶🎤🎉 Welcome to SGGS Orchestra Concert Ticket System 🎉🎤🎶</h1>
+        </header>
+
+        <!-- Image Frame Section -->
+        <section class="image-frame">
+            <img src="https://via.placeholder.com/600x300" alt="Concert Image" id="concert-image">
+        </section>
+
+        <main>
+            <section class="ticket-selection">
+                <h2>🌟 Select Your Ticket Category 🌟</h2>
+                <label for="category">Choose a Ticket Category:</label>
+                <select id="category" name="category">
+                    <option value="pelajar sggs">Pelajar SGGS</option>
+                    <option value="guru sggs">Guru SGGS</option>
+                    <option value="orang awam <12">Orang Awam <12</option>
+                    <option value="orang awam 13-50">Orang Awam 13-50</option>
+                    <option value="orang awam 51+">Orang Awam 51+</option>
+                </select>
+                <button onclick="addTicket()">Add Ticket</button>
+            </section>
+
+            <section class="ticket-list">
+                <h3>Your Selected Tickets</h3>
+                <div id="tickets-list"></div>
+            </section>
+
+            <section class="total">
+                <h3>Total Amount: RM <span id="total-price">0.00</span></h3>
+                <button id="finishBtn" onclick="finishPurchase()">Complete Purchase</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>🎉 Thank you for using the SGGS Orchestra Ticket System! 🎉</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
